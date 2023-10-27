@@ -299,3 +299,22 @@ def edit_transaction(transaction_id):
         return redirect(url_for('history'))  # Redirect to 'history' after successful update
 	    
 cnx = psycopg2.connect(user="lokalnyadmin", password="Zaqxswcde123!", host="obieg.postgres.database.azure.com", port=5432, database="")
+
+import psycopg2
+
+try:
+    # Nawiązanie połączenia
+    cnx = psycopg2.connect(user="lokalnyadmin", password="{your_password}", host="obieg.postgres.database.azure.com", port=5432, database="")
+    cursor = cnx.cursor()
+
+    # Proste zapytanie w celu weryfikacji połączenia
+    cursor.execute("SELECT version();")
+    version = cursor.fetchone()
+    print(f"Połączono z bazą danych. Wersja PostgreSQL: {version[0]}")
+
+    # Zamknięcie połączenia
+    cursor.close()
+    cnx.close()
+
+except Exception as e:
+    print(f"Błąd połączenia z bazą danych: {e}")
