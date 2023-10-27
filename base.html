@@ -5,74 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elektroniczny Obieg Dokumentów</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #e2e0e0;
             margin: 0;
             padding: 0;
-            background-color: #e2e0e0;
         }
 
-        header {
-            display: flex;
-            justify-content: space-between;
-            padding: 20px 50px;
+        h1, h2 {
             background-color: #5a9c65;
-        }
-
-        h1 {
-            font-size: 24px;
             color: #fff;
+            padding: 20px;
             text-align: center;
-        }
-
-        nav {
-            display: flex;
-            gap: 20px;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 5px 10px;
-            border-radius: 5px;
-            background-color: #406b46;
-            transition: background-color 0.3s;
-        }
-
-        nav a:hover {
-            background-color: #5a9c65;
+            margin: 0;
         }
 
         .main-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 50px;
-        }
-
-        h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-
-        p {
-            font-size: 16px;
-            margin-bottom: 30px;
-            text-align: center;
+            background-color: #fff;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
         }
 
         .buttons {
             display: flex;
             gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
         }
 
         .buttons a {
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            color: #fff;
             background-color: #5a9c65;
+            padding: 10px 20px;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
             transition: background-color 0.3s;
         }
 
@@ -80,32 +51,40 @@
             background-color: #406b46;
         }
 
-        .document-images {
+        .icon-container {
             display: flex;
             gap: 20px;
             margin-top: 30px;
+            justify-content: center;
         }
 
-        .document-image {
+        .icon-box {
             width: 100px;
             height: 100px;
-            border-radius: 50%;
+            border-radius: 5px;
             background-color: #ccc;
-            /* Dodaj obrazy dokumentów w tle */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: #5a9c65;
+            transition: background-color 0.3s;
+        }
+
+        .icon-box:hover {
+            background-color: #e2e0e0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #888;
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <h1>Elektroniczny Obieg Dokumentów</h1>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Pomoc</a>
-            <a href="#">Kontakt</a>
-            <a href="#">Zaloguj</a>
-        </nav>
-    </header>
+    <h1>Elektroniczny Obieg Dokumentów</h1>
     <div class="main-content">
         <h2>Zarządzaj dokumentami w prosty i wydajny sposób!</h2>
         <p>Zapraszamy na naszą stronę, gdzie znajdziesz nowoczesne rozwiązania do zarządzania dokumentacją w firmie.</p>
@@ -113,10 +92,27 @@
             <a href="#">Przeglądaj</a>
             <a href="#">Więcej informacji</a>
         </div>
-        <div class="document-images">
-
+        <div class="icon-container">
+            <div class="icon-box">
+                <i class="fas fa-folder-open"></i>
+            </div>
+            <div class="icon-box">
+                <i class="fas fa-exchange-alt"></i>
+            </div>
+            <div class="icon-box">
+                <i class="fas fa-user-friends"></i>
+            </div>
+            <div class="icon-box">
+                <i class="fas fa-file-signature"></i>
+            </div>
+            <div class="icon-box">
+                <i class="fas fa-archive"></i>
+            </div>
         </div>
     </div>
+    <footer>
+        <p>© 2023 Elektroniczny Obieg Dokumentów. Wszelkie prawa zastrzeżone. | Wersja 1.0.0</p>
+    </footer>
 </body>
 
 </html>
