@@ -297,3 +297,5 @@ def edit_transaction(transaction_id):
         db.execute(sql_command, [currency, amount, 'admin', date.today(), transaction_id])
         db.commit()
         return redirect(url_for('history'))  # Redirect to 'history' after successful update
+	    
+cnx = psycopg2.connect(user="lokalnyadmin", password="Zaqxswcde123!", host="obieg.postgres.database.azure.com", port=5432, database="")
