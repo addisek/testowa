@@ -1,34 +1,77 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Strona Powitalna</title>
+    <meta charset="utf-8">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <style>
-        .buttons {
-            margin-top: 20px;
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e2e0e0;
         }
 
-        .button {
-            padding: 10px 20px;
-            margin: 10px;
-            cursor: pointer;
+        h1 {
+            background-color: #5a9c65;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            background-color: #fff;
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu-tile {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #5a9c65;
+            color: #fff;
+            border-radius: 3px;
+        }
+
+        .menu-icon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        .menu-text {
+            font-size: 18px;
+        }
+
+        .menu-tile:hover {
+            background-color: #406b46;
         }
     </style>
 </head>
+
 <body>
-    <header>
-        <h1>Witaj w systemie elektronicznego obiegu dokumentów!</h1>
-    </header>
-    <main>
+    <h1>Witaj w systemie elektronicznego obiegu dokumentów!</h1>
+    <div class="container">
         <p>Elektroniczny obieg dokumentów to nowoczesne i ekologiczne rozwiązanie, które pozwala na efektywne zarządzanie dokumentacją w firmie. Dzięki niemu możesz szybko przesyłać, akceptować oraz archiwizować dokumenty bez konieczności ich drukowania.</p>
-        <div class="buttons">
-            <a href="login.html" class="button">Przejdź do logowania</a>
-            <a href="tworcy.html" class="button">Poznaj twórców</a>
+        
+        <div class="menu-tile">
+            <i class="fas fa-sign-in-alt menu-icon"></i>
+            <span class="menu-text"><a href="login.html">Przejdź do logowania</a></span>
         </div>
-    </main>
-    <footer>
+        
+        <div class="menu-tile">
+            <i class="fas fa-info-circle menu-icon"></i>
+            <span class="menu-text"><a href="tworcy.html">Poznaj twórców</a></span>
+        </div>
+    </div>
+
+    <footer style="text-align: center; margin-top: 50px; color: #888;">
         <p>© 2023 Elektroniczny Obieg Dokumentów. Wszelkie prawa zastrzeżone. | Wersja 1.0.0</p>
     </footer>
 </body>
+
 </html>
