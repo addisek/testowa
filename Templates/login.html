@@ -76,7 +76,20 @@
         }
     </style>
 </head>
+<script type="text/javascript">
+    function checkCredentials() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
 
+        if (username == "admin" && password == "123") {
+            sessionStorage.setItem("loggedIn", "true");  // Dodajemy informację o zalogowaniu do sessionStorage
+            window.location.href = "menu.html";
+        } else {
+            alert("Niepoprawne dane logowania. Spróbuj ponownie.");
+        }
+        return false;
+    }
+</script>
 <body>
     <h1>Logowanie</h1>
     <div class="container">
