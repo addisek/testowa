@@ -20,6 +20,13 @@
             return false;
         }
     </script>
+<script type="text/javascript">
+    // Sprawdzanie czy użytkownik jest zalogowany
+    if (!sessionStorage.getItem("loggedIn")) {
+        window.location.href = "login.html";
+    }
+</script>
+
     <style>
         body {
             font-family: Arial, sans-serif;
