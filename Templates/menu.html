@@ -1,32 +1,12 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html>
 
 <head>
-    <title>Logowanie</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Menu</title>
+    <meta charset="utf-8">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome dla ikon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <script type="text/javascript">
-        function checkCredentials() {
-            var username = document.getElementById("username").value;
-            var password = document.getElementById("password").value;
-
-            if (username == "admin" && password == "123") {
-                window.location.href = "menu.html";
-            } else {
-                alert("Niepoprawne dane logowania. Spróbuj ponownie.");
-            }
-            return false;
-        }
-    </script>
-<script type="text/javascript">
-    // Sprawdzanie czy użytkownik jest zalogowany
-    if (!sessionStorage.getItem("loggedIn")) {
-        window.location.href = "login.html";
-    }
-</script>
-
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -45,7 +25,7 @@
         .container {
             background-color: #fff;
             width: 400px;
-            margin: 50px auto;
+            margin: 0 auto;
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -66,6 +46,34 @@
             border-radius: 3px;
         }
 
+        .menu-tile {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #5a9c65;
+            color: #fff;
+            border-radius: 3px;
+        }
+
+        .menu-icon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        .menu-text {
+            font-size: 18px;
+        }
+
+        .menu-tile:hover {
+            background-color: #406b46;
+        }
+
+        p {
+            font-size: 12px;
+            color: #888;
+        }
+
         .fa-user,
         .fa-lock,
         .fa-sign-in-alt {
@@ -74,34 +82,37 @@
 
         /* Styl dla hiperłączy */
         a {
-            text-decoration: none;
-            color: inherit;
+            text-decoration: none; /* Usunięcie podkreślenia z hiperłączy */
+            color: inherit; /* Dziedziczenie koloru tekstu */
         }
 
         a:hover {
-            color: inherit;
+            color: inherit; /* Dziedziczenie koloru tekstu po najechaniu myszką */
         }
     </style>
 </head>
 
 <body>
-    <h1>Logowanie</h1>
+    <h1>Main Menu</h1>
     <div class="container">
-        <form onsubmit="return checkCredentials();">
-            <label for="username">
-                <i class="fas fa-user"></i>
-                Nazwa użytkownika:
-            </label>
-            <input type="text" id="username" name="username">
-            
-            <label for="password">
-                <i class="fas fa-lock"></i>
-                Hasło:
-            </label>
-            <input type="password" id="password" name="password">
-            
-            <input type="submit" class="btn btn-success btn-block" value="Zaloguj">
-        </form>
+        <h2>Welcome,</h2>
+        <h2>{{ user.name }}</h2>
+        <div class="menu-tile">
+            <i class="fas fa-upload menu-icon"></i>
+            <span class="menu-text"><a href="#">Prześlij nowy dokument</a></span>
+        </div>
+        <div class="menu-tile">
+            <i class="fas fa-file menu-icon"></i>
+            <span class="menu-text"><a href="#">Twoje dokumenty</a></span>
+        </div>
+        <div class="menu-tile">
+            <i class="fas fa-cog menu-icon"></i>
+            <span class="menu-text"><a href="#">Ustawienia</a></span>
+        </div>
+        <div class="menu-tile">
+            <i class="fas fa-sign-out-alt menu-icon"></i>
+            <span class="menu-text"><a href="#">Wyloguj</a></span>
+        </div>
     </div>
 </body>
 
