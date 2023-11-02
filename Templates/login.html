@@ -7,19 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <script type="text/javascript">
-        function checkCredentials() {
-            var username = document.getElementById("username").value;
-            var password = document.getElementById("password").value;
-
-            if (username == "admin" && password == "123") {
-                window.location.href = "menu.html";
-            } else {
-                alert("Niepoprawne dane logowania. Spróbuj ponownie.");
-            }
-            return false;
-        }
-    </script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -76,25 +63,7 @@
         }
     </style>
 </head>
-<script type="text/javascript">
-   function checkCredentials() {
-    var username = document.getElementById("username").value;
-    var password = document.getElementById("password").value;
 
-    if (username == "admin" && password == "123") {
-        sessionStorage.setItem("loggedIn", "true");
-        window.location.href = "menu_admin.html";
-    } else if (username == "m.mateusz" && password == "haslo123") {
-        sessionStorage.setItem("loggedIn", "true");
-        window.location.href = "menu.html";  // m.mateusz przekierowywany jest do menu.html
-    } else {
-        alert("Niepoprawne dane logowania. Spróbuj ponownie.");
-    }
-    return false;
-}
-
-    }
-</script>
 <body>
     <h1>Logowanie</h1>
     <div class="container">
@@ -114,6 +83,23 @@
             <input type="submit" class="btn btn-success btn-block" value="Zaloguj">
         </form>
     </div>
+    <script type="text/javascript">
+        function checkCredentials() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username == "admin" && password == "123") {
+                sessionStorage.setItem("loggedIn", "true");
+                window.location.href = "menu_admin.html";
+            } else if (username == "m.mateusz" && password == "haslo123") {
+                sessionStorage.setItem("loggedIn", "true");
+                window.location.href = "menu.html";  // m.mateusz przekierowywany jest do menu.html
+            } else {
+                alert("Niepoprawne dane logowania. Spróbuj ponownie.");
+            }
+            return false;
+        }
+    </script>
 </body>
 
 </html>
