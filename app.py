@@ -11,7 +11,8 @@ import string
 
 
 app_info = {
-    'db_file': 'C:\\Users\\miesz\\Documents\\GitHub\\Ostateczna\\data\\cantor.db'
+	cnx = psycopg2.connect(user="lokalnyadmin", password="Zaqxswcde123!", host="obieg.postgres.database.azure.com", port=5432, database="user")
+    C:\Users\m.matuszak\OneDrive - Beyond.pl Sp. z o.o\Pulpit\test\OpenWorkFlow-main
 }
 
 app = Flask(__name__)
