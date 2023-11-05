@@ -23,47 +23,30 @@
 
         .container {
             background-color: #fff;
-            width: 400px;
+            width: 800px; /* Zwiększ szerokość, aby pomieścić więcej kolumn */
             margin: 20px auto;
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
         }
 
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
+        table {
+            width: 100%;
         }
 
-        input[type="text"],
-        input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
+        th, td {
+            padding: 8px;
+            text-align: center;
         }
 
-        input[type="submit"] {
-            width: 100%;
+        th {
             background-color: #5a9c65;
             color: #fff;
-            padding: 10px;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
         }
 
-        input[type="submit"]:hover {
-            background-color: #406b46;
-        }
-
-        p {
-            font-size: 12px;
-            color: #888;
-            margin-top: 5px;
-            text-align: center;
+        .btn-back {
+            margin-bottom: 20px;
+            display: block;
         }
 
         .fa-user,
@@ -85,8 +68,9 @@
 </head>
 
 <body>
-    <h1>Edit User {{ user.name }}</h1>
+    <h1>Edit Users</h1>
     <div class="container">
+        <a href="menu_admin.html" class="btn btn-back"><i class="fas fa-arrow-left"></i> Powrót</a>
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -97,7 +81,7 @@
                 </tr>
             </thead>
             <tbody>
-                <a href="menu_admin.html" class="btn btn-back"><i class="fas fa-arrow-left"></i> Powrót</a>
+                {% for user in users %}
                 <tr>
                     <td>{{ user.id }}</td>
                     <td>{{ user.name }}</td>
@@ -111,6 +95,7 @@
                         </a>
                     </td>
                 </tr>
+                {% endfor %}
             </tbody>
         </table>
 
