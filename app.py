@@ -12,7 +12,7 @@ import string
 
 app_info = {
 	cnx = psycopg2.connect(user="lokalnyadmin", password="Zaqxswcde123!", host="obieg.postgres.database.azure.com", port=5432, database="user")
-    C:\Users\m.matuszak\OneDrive - Beyond.pl Sp. z o.o\Pulpit\test\OpenWorkFlow-main
+    C:\Users\mateu\Desktop\praca\testowa-main\testowa-main
 }
 
 app = Flask(__name__)
